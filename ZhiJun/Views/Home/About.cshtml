@@ -1,7 +1,67 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<div class="custom_content custom">
+    <div class="container large">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 custom_right">
+                <div class="single_content_left">
+                    <h3>真诚回答您的问题</h3>
+                    <div class="contact_form">
+                        <form method="post" action="#">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-7">
+                                    <div class="form-group">
+                                        <label>姓名 <span class="error">*</span></label>
+                                        <input type="text" class="form-control" name="name">
+                                    </div>
+                                </div>
+                            </div><!--end row-->
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-7">
+                                    <div class="form-group">
+                                        <label>邮箱 <span class="error">*</span></label>
+                                        <input type="text" class="form-control" name="email">
+                                    </div>
+                                </div>
+                            </div><!--end row-->
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-11">
+                                    <div class="form-group">
+                                        <label>信息 <span class="error">*</span></label>
+                                        <textarea class="form-control" cols="10" rows="9"></textarea>
+                                    </div>
+                                </div>
+                            </div><!--end row-->
+                            <input type="submit" value="发送" class="commonBtn">
+                        </form>
+                    </div>
+                </div><!--end single content left-->
+            </div>
+
+            <div class="col-xs-12 col-sm-4 custom_left">
+                <div class="sidebar">
+                    <div class="list_block sidebar_item">
+                        <h3>联系方式</h3>
+                        <ul class="contact_info">
+                            <li><i class="fa fa-home"></i>天津市南开区迎水道7号科研办公楼1号楼3楼309</li>
+                            <li><i class="fa fa-envelope"></i> <a href="mailto:zhijunedu@163.com">zhijunedu@163.com</a></li>
+                            <li><i class="fa fa-phone"></i> 宋老师： 022-60920139</li>
+                            <li><i class="fa fa-qq"></i> 917927638， 281013109</li>
+                        </ul>
+                    </div>
+                    <div class="list_block">
+                        <h3>办公时间</h3>
+                        <ul class="contact_info">
+                            <li><strong>周一到周五:</strong> 8点到18点</li>
+                            <li><strong>周六:</strong> 8点到13点</li>
+                            <li><strong>周日:</strong> 休息</li>
+                        </ul>
+                    </div><!--end sidebar item-->
+                   
+                </div><!--end sidebar-->
+            </div>
+        </div><!--end row-->
+    </div>
+</div><!--end custom content-->

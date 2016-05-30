@@ -1,31 +1,359 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "首页";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<div class="banner carousel slide" id="recommended-item-carousel" data-ride="carousel">
+    <div class="slides carousel-inner">
+        <div class="item active">
+            <img src="img/home/slider/slider_image_1.jpg" alt="" />
+            <div class="banner_caption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="caption_inner animated fadeInUp">
+                                <h1>成人高考介绍</h1>
+                                <p>成人高考属国民教育系列，列入国家招生计划，国家承认学历，参加全国招生统一考试，各省市，自治区统一组织录取。承认高等学历教育分为：专科起点升本科(简称专升本)，高中起点升专科(简称高升专)</p>
+                                <a href="about.html">了解更多</a>
+                            </div><!--end caption_inner-->
+                        </div>
+                    </div><!--end row-->
+                </div><!--end container-->
+            </div><!--end banner_caption-->
+        </div>
+        <div class="item">
+            <img src="img/home/slider/slider_image_2.jpg" alt="" />
+            <div class="banner_caption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="caption_inner animated fadeInUp">
+                                <h1>自考介绍</h1>
+                                <p>高等教育自学考试，简称自考，是对自学者进行的以学历考试为主的高等教育国家考试，是个人自学、社会助学和国家考试相结合的高等教育形式，是我国社会主义高等教育体系的重要组成部分经过系统的学习后，通过毕业论文答辩、学位英语考核达到规定成绩，符合学位申请条件的，可申请授予成人学士学位，并可继续攻读硕士学位和博士学位。</p>
+                                <a href="buying-steps.html">了解更多</a>
+                            </div><!--end caption_inner-->
+                        </div>
+                    </div><!--end row-->
+                </div><!--end container-->
+            </div><!--end banner_caption-->
+        </div>
+        <div class="item">
+            <img src="img/home/slider/slider_image_3.jpg" alt="" />
+            <div class="banner_caption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="caption_inner animated fadeInUp">
+                                <h1>电大学院</h1>
+                                <p>电大即中央广播电视大学以及地方各级广播电视大学，简称“电大”。中央广播电视大学是采用计算机网络、卫星电视等现代传媒技术，运用印刷教材、音像教材、多媒体课件、网络课程等多种教学媒体，面向全国开展远程教育的教育部直属高等学校。</p>
+                                <a href="contact-us.html">了解更多</a>
+                            </div><!--end caption_inner-->
+                        </div>
+                    </div><!--end row-->
+                </div><!--end container-->
+            </div><!--end banner_caption-->
+        </div>
+        <div class="item">
+            <img src="img/home/slider/slider_image_4.jpg" alt="" />
+            <div class="banner_caption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="caption_inner animated fadeInUp">
+                                <h1>网络报名</h1>
+                                <p>轻松简单填写个人意愿和信息，我们会帮助您选择申请合适专业，全程免费。</p>
+                                <a href="course-fullwidth.html">现在报名</a>
+                            </div><!--end caption_inner-->
+                        </div>
+                    </div><!--end row-->
+                </div><!--end container-->
+            </div><!--end banner_caption-->
+        </div>
+    </div>
+    <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+        <img src="img/home/slider/prev.png">
+    </a>
+    <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+        <img src="img/home/slider//next.png">
+    </a>
+</div><!--end banner-->
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@*<div class="aboutArea">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-xs-12">
+                <div class="aboutTitle">
+                    <h2>推荐课程</h2>
+                </div><!-- aboutTitle -->
+            </div><!-- col-sm-3 col-xs-12 -->
+        </div><!-- row clearfix -->
+
+        <div class="about_inner clearfix">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="aboutImage">
+                        <a href="single-course-right-sidebar.html">
+                            <img src="img/home/learn/learn_1.jpg" alt="" class="img-responsive" />
+                            <div class="overlay">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur ante volutpat sem aliquam lobortis.</p>
+                            </div>
+                            <span class="captionLink">English Literature<span></span></span>
+                        </a>
+                    </div><!-- aboutImage -->
+                </div>
+
+                <div class="col-xs-6 col-sm-3">
+                    <div class="aboutImage">
+                        <a href="single-course-right-sidebar.html">
+                            <img src="img/home/learn/learn_2.jpg" alt="" class="img-responsive" />
+                            <div class="overlay">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur ante volutpat sem aliquam lobortis.</p>
+                            </div>
+                            <span class="captionLink">Business Administration<span></span></span>
+                        </a>
+                    </div><!-- aboutImage -->
+                </div>
+
+                <div class="col-xs-6 col-sm-3">
+                    <div class="aboutImage">
+                        <a href="single-course-right-sidebar.html">
+                            <img src="img/home/learn/learn_3.jpg" alt="" class="img-responsive" />
+                            <div class="overlay">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur ante volutpat sem aliquam lobortis.</p>
+                            </div>
+                            <span class="captionLink">Computer Science<span></span></span>
+                        </a>
+                    </div><!-- aboutImage -->
+                </div>
+
+                <div class="col-xs-6 col-sm-3">
+                    <div class="aboutImage">
+                        <a href="single-course-right-sidebar.html">
+                            <img src="img/home/learn/learn_4.jpg" alt="" class="img-responsive" />
+                            <div class="overlay">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur ante volutpat sem aliquam lobortis.</p>
+                            </div>
+                            <span class="captionLink">Mathematics<span></span></span>
+                        </a>
+                    </div><!-- aboutImage -->
+                </div>
+            </div><!-- row -->
+        </div><!-- about_inner -->
+
+    </div><!-- container -->
+</div><!-- aboutArea -->*@
+
+<div class="mainContent clearfix">
+    <div class="container">
+        <div class="row clearfix">
+
+            <div class="col-sm-8 col-xs-12">
+                <div class="videoNine clearfix">
+
+                    @*<div class="videoArea clearfix">
+                        <h3>Welcome To Royal College</h3>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-7 col-xs-12 videoLeft">
+                                <img src="img/home/video_image.jpg" data-video="https://www.youtube.com/embed/oOMcZoeEK0A?autoplay=1">
+                            </div><!-- videoLeft -->
+                            <div class="col-lg-4 col-md-5 col-xs-12 videoRight">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur ante volutpat sem aliquam lobortis. Mauris porta fermentum volutpat. Praesent est sapien, tincidunt vel arcu vitae, mattis sollicitudin lectus. Mauris porta fermentum volutpat. Praesent est sapien, tincidunt vel arcu vitae, mattis sollicitudin lectus.</p>
+                                <a href="about.html" class="btn btn-block learnBtn">Learn More</a>
+                            </div><!-- videoRight -->
+                        </div><!-- row -->
+                    </div><!-- videoArea -->*@
+
+                    <div class="related_post_sec single_post">
+                        <h3>招生动态</h3>
+                        <ul>
+                            <li>
+                                <span class="rel_thumb">
+                                    <a href="single-post-right-sidebar.html"><img src="img/news/related_thumb_01.png" alt=""></a>
+                                </span><!--end rel_thumb-->
+                                <div class="rel_right">
+                                    <h4><a href="single-post-right-sidebar.html">天津大学2015年高自考招生简章</a></h4>
+                                    <div class="meta">          
+                                        <span class="date">发布日期: 2015-07-14</span>
+                                    </div>
+                                    <p>天津大学是天津市自考委授权的30多个专业的主考学校。天津大学开办高等教育自学考试助学班，具有丰富的办学经验和教育教学管理经验，享有很高的社会信誉...</p>
+                                </div><!--end rel right-->
+                            </li>
+                            <li>
+                                <span class="rel_thumb">
+                                    <a href="single-post-right-sidebar.html"><img src="img/news/related_thumb_02.jpg" alt=""></a>
+                                </span><!--end rel_thumb-->
+                                <div class="rel_right">
+                                    <h4><a href="single-post-right-sidebar.html">天津大学2015年高自考招生简章</a></h4>
+                                    <div class="meta">
+                                        <span class="date">发布日期: 2015-07-14</span>
+
+                                    </div>
+                                    <p>天津大学是天津市自考委授权的30多个专业的主考学校。天津大学开办高等教育自学考试助学班，具有丰富的办学经验和教育教学管理经验，享有很高的社会信誉...</p>
+                                </div><!--end rel right-->
+                            </li>
+                        </ul>
+                    </div><!--related_post_sec-->
+
+                </div><!--videoNine-->
+            </div><!-- col-sm-8 col-xs-12 -->
+
+            <div class="col-sm-4 col-xs-12">
+                @*<div class="formArea clearfix">
+                    <div class="formTitle">
+                        <h3>Find a Course</h3>
+                        <p>Offered in small class sizes with great emphasis on the demands of the specification and exam technique.</p>
+                    </div><!-- formTitle -->
+                    <form action="#" method="post">
+                        <div class="selectBox clearfix">
+                            <select name="guiest_id1" id="guiest_id1">
+                                <option value="0">Location</option>
+                                <option value="1">Location_1</option>
+                                <option value="2">Location_2</option>
+                                <option value="3">Location_3</option>
+                            </select>
+                        </div><!-- selectBox -->
+                        <div class="selectBox clearfix">
+                            <select name="guiest_id2" id="guiest_id2">
+                                <option value="0">Level</option>
+                                <option value="1">Level_1</option>
+                                <option value="2">Level_2</option>
+                                <option value="3">Level_3</option>
+                            </select>
+                        </div><!-- selectBox -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Course Name">
+                        </div>
+                        <button type="submit" class="btn btn-default btn-block commonBtn">Search</button>
+                    </form>
+                </div><!-- formArea -->*@
+                <div class="list_block related_post_sec">
+                    <div class="upcoming_events">
+                        <h3>活动动态</h3>
+                        <ul>
+                            <li class="related_post_sec single_post">
+                                <span class="date-wrapper">
+                                    <span class="date"><span>1号</span>六月</span>
+                                </span>
+                                <div class="rel_right">
+                                    <h4><a href="single-events.html">儿童节大酬宾</a></h4>
+                                    <div class="meta">
+                                        <span class="place"><i class="fa fa-map-marker"></i>天津大学</span>
+                                        <span class="event-time"><i class="fa fa-clock-o"></i>11.00 点</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="related_post_sec single_post">
+                                <span class="date-wrapper">
+                                    <span class="date"><span>1号</span>六月</span>
+                                </span>
+                                <div class="rel_right">
+                                    <h4><a href="single-events.html">儿童节大酬宾</a></h4>
+                                    <div class="meta">
+                                        <span class="place"><i class="fa fa-map-marker"></i>天津大学</span>
+                                        <span class="event-time"><i class="fa fa-clock-o"></i>11.00 点</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="related_post_sec single_post">
+                                <span class="date-wrapper">
+                                    <span class="date"><span>1号</span>六月</span>
+                                </span>
+                                <div class="rel_right">
+                                    <h4><a href="single-events.html">儿童节大酬宾</a></h4>
+                                    <div class="meta">
+                                        <span class="place"><i class="fa fa-map-marker"></i>天津大学</span>
+                                        <span class="event-time"><i class="fa fa-clock-o"></i>11.00 点</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="events-3col.html" class="btn btn-default btn-block commonBtn">更多</a>
+                    </div>
+                </div><!-- end list_block -->
+            </div><!-- col-sm-4 col-xs-12 -->
+
+        </div><!-- row clearfix -->
+    </div><!-- container -->
+</div><!-- mainContent -->
+
+<div class="count clearfix wow fadeIn" data-wow-delay="100ms">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3">
+                <div class="text-center">
+                    <div class="icon"><i class="fa fa-group"></i></div>
+                    <div class="counter">
+                        <span class="timer">8298</span>
+                    </div>
+                    <div class="seperator-small"></div>
+                    <p>学生</p>
+                </div>
+            </div><!-- col-sm-3 -->
+            <div class="col-xs-6 col-sm-3">
+                <div class="text-center">
+                    <div class="icon"><i class="fa fa-book"></i></div>
+                    <div class="counter">
+                        <span class="timer">142</span>
+                    </div>
+                    <div class="seperator-small"></div>
+                    <p>课程</p>
+                </div>
+            </div><!-- col-sm-3 -->
+            <div class="col-xs-6 col-sm-3">
+                <div class="text-center">
+                    <div class="icon"><i class="fa fa-male"></i></div>
+                    <div class="counter">
+                        <span class="timer">1047</span>
+                    </div>
+                    <div class="seperator-small"></div>
+                    <p>申请中</p>
+                </div>
+            </div><!-- col-sm-3 -->
+            <div class="col-xs-6 col-sm-3">
+                <div class="text-center">
+                    <div class="icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="counter">
+                        <span class="timer">10</span>
+                    </div>
+                    <div class="seperator-small"></div>
+                    <p>学校</p>
+                </div>
+            </div><!-- col-sm-3 -->
+        </div><!-- row -->
+     
+    </div><!-- container -->
+</div><!-- count -->
+
+<div class="testimonial-section clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="testimonial">
+                    <div class="carousal_content">
+                        <p>感谢您感谢您感谢您感谢您感谢您感谢您感谢您感谢您感谢您感谢您</p>
+                    </div>
+                    <div class="carousal_bottom">
+                        <div class="thumb">
+                            <img src="img/about/SARA-LISBON_Art-Student.jpg" alt="" draggable="false">
+                        </div>
+                        <div class="thumb_title">
+                            <span class="author_name">宋小宏</span>
+                            <span class="author_designation">学生<a href="#"> 小学专业</a></span>
+                        </div>
+                    </div>
+                </div><!-- testimonial -->
+            </div><!-- col-xs-12 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="features">
+                    <h3>为什么选择我们?</h3>
+                    <ul>
+                        <li><i class="fa fa-check-circle-o"></i>我们是最好的</li>
+                        <li><i class="fa fa-check-circle-o"></i>我们是最好的</li>
+                        <li><i class="fa fa-check-circle-o"></i>定制专业</li>
+                        <li><i class="fa fa-check-circle-o"></i>一条龙服务</li>
+                        <li><i class="fa fa-check-circle-o"></i>随时电话联系</li>
+                    </ul>
+                </div>
+            </div><!-- col-xs-12 -->
+        </div><!-- row -->
+    </div><!-- container -->
+</div><!-- testimonial-section -->
