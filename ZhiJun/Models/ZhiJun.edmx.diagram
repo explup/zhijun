@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7c0e580ea9dd47059f8bc5d02ab8ca0d" Name="Diagram1" >
+        <EntityTypeShape EntityType="ZhiJun.New" Width="1.5" PointX="4.625" PointY="0.5" />
+        <EntityTypeShape EntityType="ZhiJun.Category" Width="1.5" PointX="2" PointY="0.5" />
+        <AssociationConnector Association="ZhiJun.CategoryNew" />
+        <EntityTypeShape EntityType="ZhiJun.Event" Width="1.5" PointX="6.875" PointY="0.5" />
+        <EntityTypeShape EntityType="ZhiJun.University" Width="1.5" PointX="2.25" PointY="5.25" />
+        <EntityTypeShape EntityType="ZhiJun.Programme" PointX="7.125" PointY="4.375" Width="1.5" />
+        <EntityTypeShape EntityType="ZhiJun.Institute" Width="1.5" PointX="4.875" PointY="5.125" />
+        <AssociationConnector Association="ZhiJun.UniversityInstitute" />
+        <AssociationConnector Association="ZhiJun.InstituteProgramme" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -10,6 +10,7 @@ namespace Songhong.Controllers
     {
         public ActionResult Index()
         {
+            
             return View();
         }
 
