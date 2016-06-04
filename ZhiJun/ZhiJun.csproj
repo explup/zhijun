@@ -170,7 +170,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\EventsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\InstitutesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LevelsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProgrammesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudyOptionsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UniversitiesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -178,41 +186,17 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Category.cs">
-      <DependentUpon>ZhiJunModels.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Event.cs">
-      <DependentUpon>ZhiJunModels.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Institute.cs">
-      <DependentUpon>ZhiJunModels.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Institute.cs" />
+    <Compile Include="Models\Level.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\New.cs">
-      <DependentUpon>ZhiJunModels.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Programme.cs">
-      <DependentUpon>ZhiJunModels.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\University.cs">
-      <DependentUpon>ZhiJunModels.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ZhiJun.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ZhiJun.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ZhiJun.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ZhiJun.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ZhiJunModels.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ZhiJunModels.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\ZhiJunModel.cs" />
+    <Compile Include="Models\News.cs" />
+    <Compile Include="Models\Programme.cs" />
+    <Compile Include="Models\StudyOption.cs" />
+    <Compile Include="Models\University.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -663,6 +647,8 @@
     <Content Include="Areas\Admin\bower_components\raphael\raphael.js" />
     <Content Include="Areas\Admin\css\sb-admin-2.css" />
     <Content Include="Areas\Admin\css\timeline.css" />
+    <Content Include="Areas\Admin\js\bootstrap-wysiwyg.js" />
+    <Content Include="Areas\Admin\js\jquery.hotkeys.js" />
     <Content Include="Areas\Admin\js\sb-admin-2.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -699,20 +685,7 @@
     <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\font-awesome\fonts\FontAwesome.otf" />
-    <EntityDeploy Include="Models\ZhiJun.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ZhiJun.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ZhiJun.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ZhiJun.Context.cs</LastGenOutput>
-      <DependentUpon>ZhiJun.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\ZhiJun.edmx.diagram">
-      <DependentUpon>ZhiJun.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Areas\Admin\bower_components\bootstrap-social\.bower.json" />
     <Content Include="Areas\Admin\bower_components\bootstrap-social\.editorconfig" />
     <Content Include="Areas\Admin\bower_components\bootstrap-social\bootstrap-social.less" />
@@ -1023,11 +996,49 @@
     <Content Include="Areas\Admin\bower_components\morrisjs\spec\viz\run.sh" />
     <Content Include="Areas\Admin\bower_components\raphael\.bower.json" />
     <Content Include="Areas\Admin\bower_components\raphael\bower.json" />
+    <Content Include="Areas\Admin\Views\AdminHome\Index.cshtml" />
+    <Content Include="img\zhijun\header_logo.png" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Universities\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Universities\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Universities\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Universities\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Universities\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Institutes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Institutes\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Institutes\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Institutes\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Institutes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Programmes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Programmes\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Programmes\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Programmes\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Programmes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Events\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Events\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Events\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Events\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Events\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Levels\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Levels\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Levels\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Levels\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Levels\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StudyOptions\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\StudyOptions\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\StudyOptions\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\StudyOptions\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\StudyOptions\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Zhijun - Web Deploy.pubxml" />
     <Content Include="img\about\1.png" />
     <Content Include="img\about\about-slide-01.jpg" />
@@ -1149,12 +1160,6 @@
     <Content Include="js\plugins\navbar.js" />
     <Content Include="js\plugins\waypoints.min.js" />
     <Content Include="js\plugins\wow.min.js" />
-    <Content Include="Models\ZhiJun.edmx.sql" />
-    <Content Include="Models\ZhiJunModels.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ZhiJunModels.cs</LastGenOutput>
-      <DependentUpon>ZhiJun.edmx</DependentUpon>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
@@ -1239,8 +1244,13 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Apply.cshtml" />
-    <Content Include="Views\Home\Introduce.cshtml" />
-    <Content Include="Views\Home\ProfessionList.cshtml" />
+    <Content Include="Views\Home\ChengRenGaoKao.cshtml" />
+    <Content Include="Views\Home\ChengKaoZhuanYe.cshtml" />
+    <Content Include="Views\Shared\_Topbar.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_MenuFooter.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Home\DaXueJieShao.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

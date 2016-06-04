@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>天津成人高考</title>
+    <title>天津智骏教育咨询有限公司</title>
     @*@Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")*@
 
@@ -31,86 +31,19 @@
 
 
 </head>
-<body>
+<body class="">
+
     <div class="main_wrapper">
 
         <div class="topbar clearfix">
-            <div class="container">
-                <ul class="topbar-left">
-                    <li class="phoneNo"><i class="fa fa-phone"></i>022-60920139</li>
-                    <li class="phoneNo"><i class="fa fa-qq"></i>QQ: 917927638, 281013109</li>
-                    <li class="phoneNo"><i class="fa fa-user"></i>宋老师</li>
-                    <li class="email-id hidden-xs hidden-sm">
-                        <i class="fa fa-envelope"></i>
-                        <a href="mailto:zhijunedu@163.com">zhijunedu@163.com</a>
-                    </li>
-                </ul>
-                <ul class="topbar-right">
-                    <li class="hidden-xs"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="hidden-xs"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="hidden-xs"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="hidden-xs"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                    <li class="hidden-xs"><a href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-            </div>
+            @Html.Partial("~/Views/Shared/_Topbar.cshtml")
         </div>
 
         <div class="header clearfix">
-            <nav class="navbar navbar-main navbar-default">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="header_inner">
-                                <!-- Brand and toggle get grouped for better mobile display -->
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                    <a class="navbar-brand logo clearfix" href="index.html"><img src="~/img/logo5.png" alt="" class="img-responsive" /></a>
-                                </div>
-                                <!-- Collect the nav links, forms, and other content for toggling -->
-                                <div class="collapse navbar-collapse" id="main-nav">
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li class="active">@Html.ActionLink("首页", "index")</li>
-                                        <li class="dropdown list-inline">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">成考学院</a>
-                                            <ul class="dropdown-menu">
-                                                <li>@Html.ActionLink("成人高考介绍", "introduce")</li>
-                                                <li>@Html.ActionLink("成考专业", "ProfessionList")</li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">自考学院</a>
-                                            <ul class="dropdown-menu">
-                                                <li>@Html.ActionLink("自考介绍", "index")</li>
-                                                <li>@Html.ActionLink("自考专业", "index")</li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电大学院</a>
-                                            <ul class="dropdown-menu">
-                                                <li>@Html.ActionLink("电大介绍", "index")</li>
-                                                <li>@Html.ActionLink("电大专业", "index")</li>
-                                            </ul>
-                                        </li>
-
-                                        <li>
-                                            @Html.ActionLink("联系我们", "about")
-                                        </li>
-                                        <li class="apply_now">@Html.ActionLink("在线报名", "apply")</li>
-                                    </ul>
-                                </div><!-- navbar-collapse -->
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /.container -->
-            </nav><!-- navbar -->
+            @Html.Partial("~/Views/Shared/_Header.cshtml")
         </div>
 
-        <div class="container body-content">
+        <div class="body-content">
             @RenderBody()
 
         </div>
@@ -160,65 +93,10 @@
                 </div>
             </div> brand-section*@
         <div class="menuFooter clearfix">
-            <div class="container">
-                <div class="row clearfix">
-
-                    <div class="col-sm-3 col-xs-6">
-                        <ul class="menuLink clearfix">
-                            <li><a href="about.html">联系我们</a></li>
-                        </ul>
-                    </div><!-- col-sm-3 col-xs-6 -->
-
-                    <div class="col-sm-3 col-xs-6 borderLeft clearfix">
-                        <ul class="menuLink clearfix">
-                            <li><a href="course-fullwidth.html">成人高考</a></li>
-                            <li><a href="buying-steps.html">自考学院</a></li>
-                            <li><a href="photo-gallery3col.html">电大学院</a></li>
-                            <li><a href="international_students.html">成考专业</a></li>
-                        </ul>
-                    </div><!-- col-sm-3 col-xs-6 -->
-
-                    <div class="col-sm-3 col-xs-6 borderLeft clearfix">
-                        <div class="footer-address">
-                            <h5>地址:</h5>
-                            <address>
-                                天津市南开区迎水道7号科研办公楼1号楼3楼309室
-                            </address>
-                            <address>
-                                电话：宋老师   QQ号917927638， 281013109
-                            </address>
-                        </div>
-                    </div><!-- col-sm-3 col-xs-6 -->
-
-                    <div class="col-sm-3 col-xs-6 borderLeft clearfix">
-                        <div class="socialArea clearfix">
-                            <h5><i class="fa fa-qq"></i>QQ 联系:</h5>
-                            <ul>
-                                <li>917927638</i>
-                                <li>281013109</li>
-                            </ul>
-                        </div><!-- social -->
-                        <div class="contactNo clearfix">
-                            <h5>联系我们:宋老师 </h5>
-                            <h3>022-60920139</h3>
-                        </div><!-- contactNo -->
-                    </div><!-- col-sm-3 col-xs-6 -->
-
-                </div><!-- row clearfix -->
-            </div><!-- container -->
+            @Html.Partial("~/Views/Shared/_MenuFooter.cshtml")
         </div><!-- menuFooter -->
         <div class="footer clearfix">
-            <div class="container">
-                <div class="row clearfix">
-                    <div class="col-sm-6 col-xs-12 copyRight">
-                        <p>© 2016 Copyright 天津智骏教育咨询有限公司</p>
-                    </div><!-- col-sm-6 col-xs-12 -->
-                    <div class="col-sm-6 col-xs-12 privacy_policy">
-                        <a href="contact-us.html">Contact us</a>
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                    </div><!-- col-sm-6 col-xs-12 -->
-                </div><!-- row clearfix -->
-            </div><!-- container -->
+            @Html.Partial("~/Views/Shared/_Footer.cshtml")
         </div><!-- footer -->
 
     </div>

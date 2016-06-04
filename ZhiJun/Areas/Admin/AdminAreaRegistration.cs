@@ -15,6 +15,12 @@ namespace ZhiJun.Areas.Admin
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
+               "Admin_home",
+               "Admin/{controller}/{action}/{id}",
+               new {  controller ="AdminHome", action = "Index", id = UrlParameter.Optional }
+           );
+
+            context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }

@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ZhiJun.Models;
 
 namespace Songhong.Controllers
 {
     public class HomeController : Controller
     {
+        private ZhiJunModel db = new ZhiJunModel();
         public ActionResult Index()
         {
-            
+
             return View();
         }
 
@@ -19,7 +21,11 @@ namespace Songhong.Controllers
             return View();
         }
 
-        public ActionResult Introduce()
+        public ActionResult ChengRenGaoKao()
+        {
+            return View();
+        }
+        public ActionResult ChengKaoZhuanYe()
         {
             return View();
         }
@@ -31,6 +37,10 @@ namespace Songhong.Controllers
         public ActionResult ProfessionList()
         {
             return View();
+        }
+        public ActionResult DaXueJieShao()
+        {
+            return View(db.Universities.Where(u=>u.Type=="成人高考").ToList());
         }
     }
 }

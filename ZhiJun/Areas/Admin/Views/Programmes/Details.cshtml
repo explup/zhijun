@@ -1,0 +1,115 @@
+﻿@model ZhiJun.Models.Programme
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>详细</h2>
+
+<div>
+    <h4>专业</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Institute.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Institute.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Level.LevelName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level.LevelName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyOption.StudyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudyOption.StudyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lengh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lengh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Requirement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Requirement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EaxmStyle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EaxmStyle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Range)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Range)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("返回列表", "Index")
+</p>

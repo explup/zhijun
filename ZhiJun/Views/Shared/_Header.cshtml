@@ -1,0 +1,57 @@
+﻿<nav class="navbar navbar-main navbar-default">
+    <div class="">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="header_inner">
+                    <div>
+                        <img src="~/img/zhijun/header_logo.png" alt="" class="img-responsive" />
+                    </div>
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                       @* <a class="navbar-brand logo clearfix" href="#"><img src="~/img/logo5.png" alt="" class="img-responsive" /></a>*@
+                    </div>
+                    
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="main-nav">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active">@Html.ActionLink("首页", "index")</li>
+                            <li class="dropdown list-inline">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">成考学院</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("成人高考介绍", "ChengRenGaoKao")</li>
+                                    <li>@Html.ActionLink("大学介绍", "DaXueJieShao")</li>
+                                    <li>@Html.ActionLink("成考专业", "ChengKaoZhuanYe")</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">自考学院</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("自考介绍", "index")</li>
+                                    <li>@Html.ActionLink("自考专业", "index")</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电大学院</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("电大介绍", "index")</li>
+                                    <li>@Html.ActionLink("电大专业", "index")</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                @Html.ActionLink("联系我们", "about")
+                            </li>
+                            <li class="apply_now">@Html.ActionLink("在线报名", "apply")</li>
+                        </ul>
+                    </div><!-- navbar-collapse -->
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container -->
+</nav><!-- navbar -->

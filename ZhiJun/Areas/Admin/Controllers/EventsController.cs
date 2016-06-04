@@ -10,9 +10,10 @@ using ZhiJun.Models;
 
 namespace ZhiJun.Areas.Admin.Controllers
 {
+    [Authorize]
     public class EventsController : Controller
     {
-        private ZhiJunContainer db = new ZhiJunContainer();
+        private ZhiJunModel db = new ZhiJunModel();
 
         // GET: Admin/Events
         public ActionResult Index()
