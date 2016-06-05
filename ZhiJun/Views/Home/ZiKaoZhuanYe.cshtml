@@ -1,0 +1,129 @@
+﻿@model IEnumerable<ZhiJun.Models.Programme>
+@{
+    ViewBag.Title = "自考专业";
+}
+
+<div class="courses_section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-9 col-lg-10 courses_right">
+                <div class="courses_right_inner padding-border-right">
+                    <div class="courses">
+                        <table class="table table-bordered table-striped" id="example">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.University.Name)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Name)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Institute.InstituteName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Level.LevelName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.StudyOption.StudyName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Lengh)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Range)
+                                    </th>                                 
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.University.Name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </td> 
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Institute.InstituteName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Level.LevelName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.StudyOption.StudyName)
+                                        </td>
+                                                                            
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Lengh)
+                                        </td>
+                                                                                                                                                                                               
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Range)
+                                        </td>                                    
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div><!--End courses-->
+
+                </div><!-- end courses_right_inner -->
+            </div><!-- end courses_right -->
+
+            <div class="col-xs-12 col-sm-3 col-lg-2 courses_left hidden-xs">
+              
+                <div class="courses_left_inner">
+                    <div class="sidebar_item">
+                        <div class="item_inner question">
+                            <h4>有问题?</h4>
+                            <h5>请联系:</h5>
+                            <h6>宋老师</h6>
+                            <p>电话： 022-60920139</p>
+                        </div>
+                    </div><!--end sidebar item-->
+                </div><!--end courses_left_inner-->
+            </div><!--end courses_left-->
+
+        </div><!-- end row -->
+
+
+    </div><!-- end container -->
+</div><!--end post section-->
+@section scripts{
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                sort: false,
+                displayLength: 100,
+                responsive: true,
+                language: {
+                    processing: "处理中...",
+                    search: "搜索",
+                    lengthMenu: "显示 _MENU_ 项结果",
+                    info: "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                    infoEmpty: "显示第 0 至 0 项结果，共 0 项",
+                    infoFiltered: "(由 _MAX_ 项结果过滤)",
+                    infoPostFix: "",
+                    loadingRecords: "载入中...",
+                    zeroRecords: "没有匹配结果",
+                    emptyTable: "表中数据为空",
+                    paginate: {
+                        first: "首页",
+                        previous: "上页",
+                        next: "下页",
+                        last: "末页"
+                    },
+                    aria: {
+                        sortAscending: ": 以升序排列此列",
+                        sortDescending: ": 以降序排列此列"
+                    }
+                },
+            });
+        });
+    </script>
+
+}

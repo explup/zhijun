@@ -18,7 +18,7 @@ namespace ZhiJun.Areas.Admin.Controllers
         // GET: Admin/Programmes
         public ActionResult Index()
         {
-            var programmes = db.Programmes.Include(p => p.Institute).Include(p => p.Level).Include(p => p.StudyOption);
+            var programmes = db.Programmes.Include(p => p.Institute).Include(p => p.Level).Include(p => p.StudyOption).Include(p => p.University);
             return View(programmes.ToList());
         }
 
@@ -40,7 +40,8 @@ namespace ZhiJun.Areas.Admin.Controllers
         // GET: Admin/Programmes/Create
         public ActionResult Create()
         {
-            ViewBag.Institute_Id = new SelectList(db.Institutes, "Id", "Name");
+            ViewBag.University_Id = new SelectList(db.Universities, "Id", "Name");
+            ViewBag.Institute_Id = new SelectList(db.Institutes, "Id", "InstituteName");
             ViewBag.Level_Id = new SelectList(db.Levels, "Id", "LevelName");
             ViewBag.StudyOption_Id = new SelectList(db.StudyOptions, "Id", "StudyName");
             return View();
@@ -51,7 +52,7 @@ namespace ZhiJun.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Detail,StudyOption_Id,Lengh,Location,Requirement,Level_Id,ClientNumber,Institute_Id,Fee,EaxmStyle,Range")] Programme programme)
+        public ActionResult Create([Bind(Include = "Id,Name,University_Id,Detail,StudyOption_Id,Lengh,Location,Requirement,Level_Id,ClientNumber,Institute_Id,Fee,EaxmStyle,Range")] Programme programme)
         {
             if (ModelState.IsValid)
             {
@@ -59,8 +60,9 @@ namespace ZhiJun.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.University_Id = new SelectList(db.Universities, "Id", "Name", programme.University_Id);
 
-            ViewBag.Institute_Id = new SelectList(db.Institutes, "Id", "Name", programme.Institute_Id);
+            ViewBag.Institute_Id = new SelectList(db.Institutes, "Id", "InstituteName", programme.Institute_Id);
             ViewBag.Level_Id = new SelectList(db.Levels, "Id", "LevelName", programme.Level_Id);
             ViewBag.StudyOption_Id = new SelectList(db.StudyOptions, "Id", "StudyName", programme.StudyOption_Id);
             return View(programme);
@@ -78,7 +80,9 @@ namespace ZhiJun.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Institute_Id = new SelectList(db.Institutes, "Id", "Name", programme.Institute_Id);
+            ViewBag.University_Id = new SelectList(db.Universities, "Id", "Name", programme.University_Id);
+
+            ViewBag.Institute_Id = new SelectList(db.Institutes, "Id", "InstituteName", programme.Institute_Id);
             ViewBag.Level_Id = new SelectList(db.Levels, "Id", "LevelName", programme.Level_Id);
             ViewBag.StudyOption_Id = new SelectList(db.StudyOptions, "Id", "StudyName", programme.StudyOption_Id);
             return View(programme);
@@ -89,7 +93,7 @@ namespace ZhiJun.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Detail,StudyOption_Id,Lengh,Location,Requirement,Level_Id,ClientNumber,Institute_Id,Fee,EaxmStyle,Range")] Programme programme)
+        public ActionResult Edit([Bind(Include = "Id,Name,University_Id,Detail,StudyOption_Id,Lengh,Location,Requirement,Level_Id,ClientNumber,Institute_Id,Fee,EaxmStyle,Range")] Programme programme)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +101,9 @@ namespace ZhiJun.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Institute_Id = new SelectList(db.Institutes, "Id", "Name", programme.Institute_Id);
+            ViewBag.University_Id = new SelectList(db.Universities, "Id", "Name", programme.University_Id);
+
+            ViewBag.Institute_Id = new SelectList(db.Institutes, "Id", "InstituteName", programme.Institute_Id);
             ViewBag.Level_Id = new SelectList(db.Levels, "Id", "LevelName", programme.Level_Id);
             ViewBag.StudyOption_Id = new SelectList(db.StudyOptions, "Id", "StudyName", programme.StudyOption_Id);
             return View(programme);

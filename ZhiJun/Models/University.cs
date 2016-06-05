@@ -11,13 +11,13 @@
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public University()
         {
-            Institutes = new HashSet<Institute>();
+            Programmes = new HashSet<Programme>();
         }
 
         public int Id { get; set; }
 
         [Required]
-        [Display(Name ="名字")]
+        [Display(Name ="大学名字")]
         public string Name { get; set; }
 
         [Required]
@@ -30,6 +30,6 @@
         public string Type { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Institute> Institutes { get; set; }
+        public virtual ICollection<Programme> Programmes { get; set; }
     }
 }

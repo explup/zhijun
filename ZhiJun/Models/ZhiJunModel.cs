@@ -20,6 +20,8 @@ namespace ZhiJun.Models
         public virtual DbSet<Programme> Programmes { get; set; }
         public virtual DbSet<StudyOption> StudyOptions { get; set; }
         public virtual DbSet<University> Universities { get; set; }
+        public virtual DbSet<Message> Messages { get; set; }
+        public virtual DbSet<Apply> Applies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -48,10 +50,14 @@ namespace ZhiJun.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<University>()
-                .HasMany(e => e.Institutes)
+                .HasMany(e => e.Programmes)
                 .WithRequired(e => e.University)
                 .HasForeignKey(e => e.University_Id)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Apply>()
+              .Property(e => e.Gender)
+              .IsFixedLength();
         }
     }
 }

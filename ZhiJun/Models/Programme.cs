@@ -34,21 +34,26 @@
         [Display(Name = "序号")]
         public int ClientNumber { get; set; }
 
-        [Display(Name = "所属系")]
-        public int Institute_Id { get; set; }
+        [Display(Name = "科类")]
+        public int University_Id { get; set; }
 
         [Display(Name = "费用")]
         public double? Fee { get; set; }
 
-        [Required]
+ 
         [Display(Name = "考试形式")]
         public string EaxmStyle { get; set; }
 
-        [Required]
+  
         [Display(Name = "招生范围")]
         public string Range { get; set; }
 
+        [Display(Name = "科类")]
+        public int Institute_Id { get; set; }
+
         public virtual Institute Institute { get; set; }
+
+        public virtual University University { get; set; }
 
         public virtual Level Level { get; set; }
 

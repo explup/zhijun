@@ -49,8 +49,9 @@ namespace ZhiJun.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Abstract,Body,Author,CreatedDate,Category_Id")] News news)
+        public ActionResult Create([Bind(Include = "Title,Abstract,Body,Author,Category_Id")] News news)
         {
+            news.CreatedDate = System.DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.News.Add(news);

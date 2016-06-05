@@ -5,7 +5,7 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-
+    using System.Web.Mvc;
     public partial class News
     {
         public int Id { get; set; }
@@ -19,6 +19,7 @@
         public string Abstract { get; set; }
 
         [Required]
+        [AllowHtml]
         [Display(Name = "文章")]
         public string Body { get; set; }
 

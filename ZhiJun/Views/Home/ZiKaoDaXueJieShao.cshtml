@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ZhiJun.Models.University>
+    @{
+        ViewBag.Title = "自考";
+    }
+    <div class="content_top clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 col-lg-10">
+                    <div class="content_left features">
+                        @foreach (ZhiJun.Models.University item in Model)
+                        {   <h1>@Html.DisplayFor(modelItem => item.Name)</h1>
+                             <p>@Html.Raw(item.Description)</p>
+                        }
+
+                 
+                    </div><!--end content left-->
+                </div>
+                <div class="col-xs-12 col-sm-3 col-lg-2 courses_left hidden-xs">
+
+                    <div class="courses_left_inner">
+                        <div class="sidebar_item">
+                            <div class="item_inner question">
+                                <h4>有问题?</h4>
+                                <h5>请联系:</h5>
+                                <h6>宋老师</h6>
+                                <p>电话： 022-60920139</p>
+                            </div>
+                        </div><!--end sidebar item-->
+                    </div><!--end courses_left_inner-->
+                </div><!--end courses_left-->
+            </div>
+        </div><!--end container-->
+    </div><!--end content top-->
+
+

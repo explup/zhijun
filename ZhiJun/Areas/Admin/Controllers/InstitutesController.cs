@@ -18,7 +18,7 @@ namespace ZhiJun.Areas.Admin.Controllers
         // GET: Admin/Institutes
         public ActionResult Index()
         {
-            var institutes = db.Institutes.Include(i => i.University);
+            var institutes = db.Institutes;
             return View(institutes.ToList());
         }
 
@@ -40,7 +40,7 @@ namespace ZhiJun.Areas.Admin.Controllers
         // GET: Admin/Institutes/Create
         public ActionResult Create()
         {
-            ViewBag.University_Id = new SelectList(db.Universities, "Id", "Name");
+            ViewBag.University_Id = new SelectList(db.Universities, "Id", "InstituteName");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace ZhiJun.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,University_Id")] Institute institute)
+        public ActionResult Create([Bind(Include = "Id,InstituteName")] Institute institute)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,6 @@ namespace ZhiJun.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.University_Id = new SelectList(db.Universities, "Id", "Name", institute.University_Id);
             return View(institute);
         }
 
@@ -74,7 +73,6 @@ namespace ZhiJun.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.University_Id = new SelectList(db.Universities, "Id", "Name", institute.University_Id);
             return View(institute);
         }
 
@@ -83,7 +81,7 @@ namespace ZhiJun.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,University_Id")] Institute institute)
+        public ActionResult Edit([Bind(Include = "Id,InstituteName")] Institute institute)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +89,6 @@ namespace ZhiJun.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.University_Id = new SelectList(db.Universities, "Id", "Name", institute.University_Id);
             return View(institute);
         }
 

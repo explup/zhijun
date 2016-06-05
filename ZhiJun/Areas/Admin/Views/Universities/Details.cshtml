@@ -24,7 +24,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Description)
+           @Html.Raw(Model.Description)
         </dd>
 
         <dt>
@@ -41,3 +41,8 @@
     @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("返回列表", "Index")
 </p>
+@section scripts{
+
+    <script>tinymce.init({ selector:'textarea' });</script>
+
+}

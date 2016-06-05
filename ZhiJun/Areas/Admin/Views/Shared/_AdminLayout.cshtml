@@ -25,6 +25,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link href="~/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="~/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" />
 </head>
 <body>
     <div id="wrapper">
@@ -267,13 +269,18 @@
                             <!-- /input-group -->
                         @*</li>*@
                         <li>
-                            @Html.ActionLink("大学管理", "index","Universities")
+                            @Html.ActionLink("客户申请管理", "index", "Applies")
 
                         </li>
                         <li>
-                            @Html.ActionLink("系管理", "index", "Institutes")
+                            @Html.ActionLink("客户消息管理", "index", "Messages")
 
                         </li>
+                        <li>
+                            @Html.ActionLink("大学管理", "index","Universities")
+
+                        </li>
+                        
                         <li>
                             @Html.ActionLink("专业管理", "index", "Programmes")
 
@@ -288,6 +295,10 @@
                         </li>
                         <li>
                             @Html.ActionLink("事件管理", "index", "Events")
+
+                        </li>
+                        <li>
+                            @Html.ActionLink("科类管理", "index", "Institutes")
 
                         </li>
                         <li>
@@ -412,8 +423,11 @@
     <script src="~/Areas/Admin/bower_components/morrisjs/morris.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <scriptj src="~/Areas/Admin/js/sb-admin-2.js"></scriptj>
-    <script src="~/Areas/Admin/js/jquery.hotkeys.js"></script>
-    <script src="~/Areas/Admin/js/bootstrap-wysiwyg.js"></script>
+    <script src="~/Areas/Admin/bower_components/tinymce/tinymce.min.js"></script>
+    <script src="~/Areas/Admin/bower_components/tinymce/jquery.tinymce.min.js"></script>
+    <script src="~/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="~/js/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

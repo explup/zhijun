@@ -25,25 +25,32 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">成考学院</a>
                                 <ul class="dropdown-menu">
                                     <li>@Html.ActionLink("成人高考介绍", "ChengRenGaoKao")</li>
-                                    <li>@Html.ActionLink("大学介绍", "DaXueJieShao")</li>
+                                    <li>@Html.ActionLink("成考大学", "ChengKaoDaXueJieShao")</li>
                                     <li>@Html.ActionLink("成考专业", "ChengKaoZhuanYe")</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">自考学院</a>
                                 <ul class="dropdown-menu">
-                                    <li>@Html.ActionLink("自考介绍", "index")</li>
-                                    <li>@Html.ActionLink("自考专业", "index")</li>
+                                    <li>@Html.ActionLink("自考介绍", "ZiKao")</li>
+                                    <li>@Html.ActionLink("自考大学", "ZiKaoDaXueJieShao")</li>
+                                    <li>@Html.ActionLink("自考专业", "ZiKaoZhuanYe")</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电大学院</a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">网络教育</a>
                                 <ul class="dropdown-menu">
-                                    <li>@Html.ActionLink("电大介绍", "index")</li>
-                                    <li>@Html.ActionLink("电大专业", "index")</li>
+                                    <li>@Html.ActionLink("网络教育大学", "DianDaDaXueJieShao")</li>
+                                    <li>@Html.ActionLink("网络教育专业", "DianDaZhuanYe")</li>
                                 </ul>
                             </li>
-
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">国家开放大学</a>
+                                <ul class="dropdown-menu">           
+                                    <li>@Html.ActionLink("国家开放大学介绍", "KaiFangDaXueJieShao")</li>
+                                    <li>@Html.ActionLink("国家开放大学专业", "KaiFangDaXueZhuanYe")</li>
+                                </ul>
+                            </li>
                             <li>
                                 @Html.ActionLink("联系我们", "about")
                             </li>
