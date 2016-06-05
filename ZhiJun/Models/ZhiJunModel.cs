@@ -8,7 +8,7 @@ namespace ZhiJun.Models
     public partial class ZhiJunModel : DbContext
     {
         public ZhiJunModel()
-            : base("name=Entities")
+            : base("name=DefaultConnection")
         {
         }
 
