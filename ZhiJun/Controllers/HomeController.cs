@@ -4,10 +4,12 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using ZhiJun.Models;
 
 namespace Songhong.Controllers
 {
+    [HandleError]
     public class HomeController : Controller
     {
         private ZhiJunModel db = new ZhiJunModel();
