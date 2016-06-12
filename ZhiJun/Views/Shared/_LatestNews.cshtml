@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ZhiJun.Models.News>
+<div class="related_post_sec single_post">
+    <h3>招生动态</h3>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <span class="rel_thumb">
+                    @*<a href="single-post-right-sidebar.html"><img src="img/news/related_thumb_01.png" alt=""></a>*@
+                </span><!--end rel_thumb-->
+                <div class="rel_right">
+                    <h4>@Html.ActionLink(item.Title, "NewDetail", new { id = item.Id })</h4>
+                    <div class="meta">
+                        <span class="date">发布日期: @item.CreatedDate.ToString("yyyy年MM月dd日", System.Globalization.CultureInfo.CreateSpecificCulture("zh-CN"))</span>
+                    </div>
+                    <p>@item.Abstract ...</p>
+                </div><!--end rel right-->
+            </li>
+        }
+
+    </ul>
+</div><!--related_post_sec-->

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ZhiJun.Models.Event>
+@using System.Globalization;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="post_section clearfix">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-8 post_left">
+                <div class="upcoming_events event-col">
+                    <div class="row clearfix">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-xs-6 col-sm-6">
+                                <div class="related_post_sec single_post">
+                                    <span class="date-wrapper">
+                                        <span class="date"><span>@item.FromDate.ToString("dd", CultureInfo.CreateSpecificCulture("zh-CN"))</span>@item.FromDate.ToString("MM月", CultureInfo.CreateSpecificCulture("zh-CN"))</span>
+                                    </span>
+                                    <div class="rel_right">
+                                        <h4>@Html.ActionLink(item.Name, "EventDetail", new { id = item.Id })</h4>
+                                        <div class="meta">
+                                            <span class="event-time"><i class="fa fa-calendar-times-o">截至日期:@item.ToDate.ToString("yyyy年MM月dd日", CultureInfo.CreateSpecificCulture("zh-CN"))</i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+
+
+                    </div><!-- row clearfix -->
+                </div>
+            </div><!--end post_left-->
+
+            <div class="col-xs-12 col-sm-4 post_right">
+                <div class="post_right_inner">
+                    <div class="related_post_sec">
+                        <div class="sidebar_item">
+                            <div class="item_inner question">
+                                <h4>有问题?</h4>
+                                <h5>请联系:</h5>
+                                <h6>宋老师</h6>
+                                <p>电话： 022-60920139</p>
+                            </div>
+                        </div><!--end sidebar item-->
+                    </div><!--end related_post_sec-->
+                </div><!--end post right inner-->
+            </div><!--end post_right-->
+
+        </div><!-- row -->
+
+    </div><!-- container -->
+</div><!-- post_section -->

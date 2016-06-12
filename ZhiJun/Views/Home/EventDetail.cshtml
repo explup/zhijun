@@ -1,0 +1,50 @@
+﻿@model ZhiJun.Models.Event
+@{
+    ViewBag.Title = "EventDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Globalization;
+
+<div class="post_section">
+    <div class="container">
+        <div class="row clearfix">
+
+            <div class="col-xs-12 col-sm-8 post_left">
+
+                <div class="upcoming_events event-col">
+                    <div class="related_post_sec single_post">
+                        <span class="date-wrapper">
+                            <span class="date"><span>@Model.FromDate.ToString("dd", CultureInfo.CreateSpecificCulture("zh-CN"))</span>@Model.FromDate.ToString("MM月", CultureInfo.CreateSpecificCulture("zh-CN"))</span>
+                       </span>
+                      
+                        <div class="rel_right">
+                            <div class="single_post single-event">
+                                <h4><a href="single-events.html">@Model.Name</a></h4>
+                                <div class="meta">
+                                    <span class="place"><i class="fa fa-map-marker"></i>@Model.Location</span>
+                                    <span class="place"><i class="fa fa-user"></i>@Model.ContactName</span>
+                                    <span class="place"><i class="fa fa-phone"></i>@Model.PhoneNumber</span>
+                                    <span class="event-time"><i class="fa fa-calendar-times-o">截至日期:@Model.ToDate.ToString("yyyy年MM月dd日", CultureInfo.CreateSpecificCulture("zh-CN"))</i></span>
+                                </div>
+                                <div class="post_desc">
+                                  @Html.Raw(@Model.Detail)
+                                </div><!--end post desc-->                      
+                            </div><!--end single_post-->
+                        </div>
+                    </div>
+                </div>
+
+             
+            </div><!--end post_left-->
+
+            <div class="col-xs-12 col-sm-4 post_right">
+             @Html.Partial("_Right_Sidebar");
+            </div><!--end post_right-->
+
+        </div><!--row-->
+    </div>
+</div><!--end post section-->	
+
+
+
+

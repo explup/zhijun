@@ -1,0 +1,39 @@
+﻿@model ZhiJun.Models.News
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Globalization;
+@{
+    ViewBag.Title = "NewDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="post_section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-8 post_left">
+                <div class="post_left_section post_left_border">
+                    <div class="post single_post">
+                        <div class="post_thumb">
+                            @*<img src="img/news/thumb_01.jpg" alt="" />*@
+                        </div><!--end post thumb-->
+                        <div class="meta">
+                            <span class="author">发布人: <a href="#">@Model.Author</a></span>
+                            <span class="date">发布日期: <a href="#">@Model.CreatedDate.ToString("yyyy年MM月dd日", CultureInfo.CreateSpecificCulture("zh-CN"))</a></span>
+                        </div><!--end meta-->
+                        <h1>@Model.Title</h1>
+                        <div class="post_desc">
+                            @Html.Raw(@Model.Body)
+                        </div>                      
+                    </div><!--end post-->          
+                </div><!--end post left section-->
+            </div><!--end post_left-->
+
+            <div class="col-xs-12 col-sm-4 post_right">            
+                    @Html.Partial("_Right_Sidebar");
+            </div><!--end post_right-->
+        </div>
+    </div>
+</div><!--end post section-->	
+

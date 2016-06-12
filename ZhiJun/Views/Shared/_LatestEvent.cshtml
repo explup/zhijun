@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ZhiJun.Models.Event>
+@using System.Globalization;
+<div class="list_block related_post_sec">
+    <div class="upcoming_events">
+        <h3>活动动态</h3>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li class="related_post_sec single_post">
+                    <span class="date-wrapper">
+                        <span class="date"><span>@item.FromDate.ToString("dd", CultureInfo.CreateSpecificCulture("zh-CN"))</span>@item.FromDate.ToString("MM月", CultureInfo.CreateSpecificCulture("zh-CN"))</span>
+                    </span>
+                    <div class="rel_right">
+                        <h4>@Html.ActionLink(item.Name, "EventDetail", new { id = item.Id })</h4>
+                        <div class="meta">
+                            <span class="event-time"><i class="fa fa-calendar-times-o">截至日期:@item.ToDate.ToString("yyyy年MM月dd日", CultureInfo.CreateSpecificCulture("zh-CN"))</i></span>
+                        </div>
+                    </div>
+                </li>
+
+            }
+
+        </ul>
+        @Html.ActionLink("更多","EventsList",null, new { @class = "btn btn-default btn-block commonBtn" })
+
+    </div>
+</div><!-- end list_block -->

@@ -1138,6 +1138,8 @@
     <Content Include="Areas\Admin\Views\Applies\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Applies\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Applies\Index.cshtml" />
+    <Content Include="img\zhijun\online_phone.jpg" />
+    <Content Include="img\zhijun\wap_ico.jpg" />
     <Content Include="js\plugins\bootstrap-datepicker\css\bootstrap-datepicker.css.map" />
     <Content Include="js\plugins\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css.map" />
     <Content Include="js\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.css.map" />
@@ -1446,9 +1448,17 @@
     <Content Include="Views\Home\KaiFangDaXue.cshtml" />
     <Content Include="Views\Home\ApplySuccessful.cshtml" />
     <Content Include="Views\Home\SendSuccessful.cshtml" />
+    <Content Include="Views\Shared\_LatestEvent.cshtml" />
+    <Content Include="Views\Shared\_LatestNews.cshtml" />
+    <Content Include="Views\Home\EventsList.cshtml" />
+    <Content Include="Views\Home\NewDetail.cshtml" />
+    <Content Include="Views\Home\EventDetail.cshtml" />
+    <Content Include="Views\Shared\_Right_Sidebar.cshtml" />
+    <Content Include="Views\Home\NewsList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\img\news\" />
     <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -142,14 +142,14 @@
     </div><!-- container -->
 </div><!-- aboutArea -->*@
 
-@*<div class="mainContent clearfix">
+<div class="mainContent clearfix">
     <div class="container">
         <div class="row clearfix">
 
             <div class="col-sm-8 col-xs-12">
                 <div class="videoNine clearfix">
 
-                    <div class="videoArea clearfix">
+                    @*<div class="videoArea clearfix">
                         <h3>Welcome To Royal College</h3>
                         <div class="row">
                             <div class="col-lg-8 col-md-7 col-xs-12 videoLeft">
@@ -160,44 +160,15 @@
                                 <a href="about.html" class="btn btn-block learnBtn">Learn More</a>
                             </div><!-- videoRight -->
                         </div><!-- row -->
-                    </div><!-- videoArea -->
+                    </div><!-- videoArea -->*@
 
-                    <div class="related_post_sec single_post">
-                        <h3>招生动态</h3>
-                        <ul>
-                            <li>
-                                <span class="rel_thumb">
-                                    <a href="single-post-right-sidebar.html"><img src="img/news/related_thumb_01.png" alt=""></a>
-                                </span><!--end rel_thumb-->
-                                <div class="rel_right">
-                                    <h4><a href="single-post-right-sidebar.html">天津大学2015年高自考招生简章</a></h4>
-                                    <div class="meta">          
-                                        <span class="date">发布日期: 2015-07-14</span>
-                                    </div>
-                                    <p>天津大学是天津市自考委授权的30多个专业的主考学校。天津大学开办高等教育自学考试助学班，具有丰富的办学经验和教育教学管理经验，享有很高的社会信誉...</p>
-                                </div><!--end rel right-->
-                            </li>
-                            <li>
-                                <span class="rel_thumb">
-                                    <a href="single-post-right-sidebar.html"><img src="img/news/related_thumb_02.jpg" alt=""></a>
-                                </span><!--end rel_thumb-->
-                                <div class="rel_right">
-                                    <h4><a href="single-post-right-sidebar.html">天津大学2015年高自考招生简章</a></h4>
-                                    <div class="meta">
-                                        <span class="date">发布日期: 2015-07-14</span>
-
-                                    </div>
-                                    <p>天津大学是天津市自考委授权的30多个专业的主考学校。天津大学开办高等教育自学考试助学班，具有丰富的办学经验和教育教学管理经验，享有很高的社会信誉...</p>
-                                </div><!--end rel right-->
-                            </li>
-                        </ul>
-                    </div><!--related_post_sec-->
+                    @Html.Partial("_LatestNews", ViewData["Latest10New"]);<!--related_post_sec-->
 
                 </div><!--videoNine-->
             </div><!-- col-sm-8 col-xs-12 -->
 
             <div class="col-sm-4 col-xs-12">
-                <div class="formArea clearfix">
+                @*<div class="formArea clearfix">
                     <div class="formTitle">
                         <h3>Find a Course</h3>
                         <p>Offered in small class sizes with great emphasis on the demands of the specification and exam technique.</p>
@@ -224,56 +195,15 @@
                         </div>
                         <button type="submit" class="btn btn-default btn-block commonBtn">Search</button>
                     </form>
-                </div><!-- formArea -->
-                <div class="list_block related_post_sec">
-                    <div class="upcoming_events">
-                        <h3>活动动态</h3>
-                        <ul>
-                            <li class="related_post_sec single_post">
-                                <span class="date-wrapper">
-                                    <span class="date"><span>1号</span>六月</span>
-                                </span>
-                                <div class="rel_right">
-                                    <h4><a href="single-events.html">儿童节大酬宾</a></h4>
-                                    <div class="meta">
-                                        <span class="place"><i class="fa fa-map-marker"></i>天津大学</span>
-                                        <span class="event-time"><i class="fa fa-clock-o"></i>11.00 点</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="related_post_sec single_post">
-                                <span class="date-wrapper">
-                                    <span class="date"><span>1号</span>六月</span>
-                                </span>
-                                <div class="rel_right">
-                                    <h4><a href="single-events.html">儿童节大酬宾</a></h4>
-                                    <div class="meta">
-                                        <span class="place"><i class="fa fa-map-marker"></i>天津大学</span>
-                                        <span class="event-time"><i class="fa fa-clock-o"></i>11.00 点</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="related_post_sec single_post">
-                                <span class="date-wrapper">
-                                    <span class="date"><span>1号</span>六月</span>
-                                </span>
-                                <div class="rel_right">
-                                    <h4><a href="single-events.html">儿童节大酬宾</a></h4>
-                                    <div class="meta">
-                                        <span class="place"><i class="fa fa-map-marker"></i>天津大学</span>
-                                        <span class="event-time"><i class="fa fa-clock-o"></i>11.00 点</span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="events-3col.html" class="btn btn-default btn-block commonBtn">更多</a>
-                    </div>
-                </div><!-- end list_block -->
+                </div><!-- formArea -->*@
+
+            @Html.Partial("_LatestEvent", ViewData["Latest10Event"]);
+            <!-- end list_block -->
             </div><!-- col-sm-4 col-xs-12 -->
 
         </div><!-- row clearfix -->
     </div><!-- container -->
-</div><!-- mainContent -->*@
+</div><!-- mainContent -->
 
 <div class="count clearfix wow fadeIn" data-wow-delay="100ms">
     <div class="container">

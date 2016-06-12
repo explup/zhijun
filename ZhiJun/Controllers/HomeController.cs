@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI;
@@ -15,8 +16,48 @@ namespace Songhong.Controllers
         private ZhiJunModel db = new ZhiJunModel();
         public ActionResult Index()
         {
-
+            ViewData["Latest10New"] = db.News.OrderBy(e => e.CreatedDate).Take(10).ToList();
+            ViewData["Latest10Event"] = db.Events.OrderBy(e => e.FromDate).Take(10).ToList();
             return View();
+        }
+        public ActionResult EventsList()
+        {
+            var allEvents = db.Events.OrderBy(e => e.FromDate).Take(100).ToList();
+            return View(allEvents);
+        }
+
+        public ActionResult EventDetail(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Event @event = db.Events.Find(id);
+            if (@event == null)
+            {
+                return HttpNotFound();
+            }
+            return View(@event);
+        }
+
+        public ActionResult NewsList()
+        {
+            var allEvents = db.Events.OrderBy(e => e.FromDate).Take(100).ToList();
+            return View(allEvents);
+        }
+
+        public ActionResult NewDetail(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            News news = db.News.Find(id);
+            if (news == null)
+            {
+                return HttpNotFound();
+            }
+            return View(news);
         }
 
         public ActionResult About()

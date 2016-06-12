@@ -8,7 +8,7 @@
     @*@Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")*@
 
-    <link rel="icon" type="image/png" href="~/img/favicon.png">
+    <link rel="icon" type="image/png" href="~/img/logo.png">
     <link href="~/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/plugins/select_option1.css">
     <link rel="stylesheet" href="~/fonts/font-awesome/css/font-awesome.min.css">
@@ -20,10 +20,10 @@
     <link rel="stylesheet" href="~/css/plugins/magnific-popup.css">
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/colors/default.css" id="option_color">
-    
-   
-    
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+
+
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.bootstrap.min.css">
     <link href="~/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
@@ -35,8 +35,15 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style type="text/css">
+        #footer {
+            position: fixed;
+              bottom:0;
+              right:0;
+              z-index:9999;
+        }
 
-
+    </style>
 </head>
 <body class="">
 
@@ -105,7 +112,17 @@
         <div class="footer clearfix">
             @Html.Partial("~/Views/Shared/_Footer.cshtml")
         </div><!-- footer -->
-
+        <div id="footer">
+            <div class="dropup">
+                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+                    微信公众号
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><img src="~/img/zhijun/wap_ico.jpg" alt="微信号"></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     @*@Scripts.Render("~/bundles/jquery")
@@ -130,8 +147,8 @@
     <script src="~/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
     <script src="~/js/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
-    
-    
+
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
