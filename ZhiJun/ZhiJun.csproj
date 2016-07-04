@@ -751,6 +751,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\font-awesome\css\font-awesome.min.css" />
     <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\bootstrap.min.css.map" />
@@ -1144,6 +1145,11 @@
     <Content Include="js\plugins\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css.map" />
     <Content Include="js\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.css.map" />
     <Content Include="js\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\Zhijun - Web Deploy.pubxml" />
     <Content Include="img\about\1.png" />
     <Content Include="img\about\about-slide-01.jpg" />
